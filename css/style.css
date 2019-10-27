@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +11,87 @@ body {
     align-items: center;
     height: 100vh;
     color: #666;
+    font-family: 'Fira Sans', sans-serif;
+}
+.logo {
+    position: relative;
+    height: 40px;
+    top: 10px;
 }
 main {
-    background-color: rgba(170, 170, 170, 0.3);
-    padding: 5vmin;
+    /* background-color: rgba(170, 170, 170, 0.3); */
+    background-color: #0A0C2E;
+    color: #60D7AC;
+    padding: 10vmin;
+    box-shadow: 5px 5px 5px;
+    border-radius: 50px;
 }
 h1 {
     padding-bottom: 2vmin;
 }
-[type=number] {
-    margin: 1vmin 0 2vmin;
-    padding: 3px;
-    width: 50%;
+h1 span {
+    color: white;
+}
+.participans {
+    padding-bottom: 1vmin;
+}
+
+[type=checkbox] {
+    margin: 1vmin .5vmin 1vmin 0;
 }
 #result {
-    margin-top: 2vmin;
+    margin: 2vmin 0 0 5vmin;
 }
-span {
-    color: rgb(184, 0, 0);
-}
+
 .rest {
     padding-top: 1vmin;
     color: red;
+}
+label {
+    display: block;
+}
+select {
+    width: 12vmin;
+}
+section {
+    display: flex;
+    align-items: center;
+}
+.groups {
+    margin: 2vmin 0 .5vmin;
+}
+[type=submit] {
+    margin-top: 2vmin;
+    padding:5px 15px; 
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+[type=submit]:hover {
+    color: #fff;
+    background-color: #333;
+}
+p:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.267);
+}
+p {
+    padding: .5vmin 1vmin;
+}
+
+
+#result1 {
+    color: red;
+}
+#result2 {
+    color: violet;
+}
+#result3 {
+    color: green;
+}
+#result4 {
+    color: blue;
+}
+#result5 {
+    color: yellow;
 }

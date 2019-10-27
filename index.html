@@ -6,20 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>SuperCode Gruppenverteilung</title>
 </head>
 <body>
     <main>
-        <h1>Teilnehmerzuweisung:</h1>
+        <h1>Willkommen bei super(<span>code</span>):</h1>
         <section>
-            <form action="javascript:calc()">
-                <h4>Trage hier die Teilnehmeranzahl ein:</h4>
-                <input type="number" name="participants" id="participants" required>
-                <h4>Trage hier die Anzahl der Gruppen ein:</h4>
-                <input type="number" name="groups" id="groups" min="2" required>
+            <form action="javascript:check()">
+                <div class="participans">Teilnehmer:</div>
+                <label><input type="checkbox" name="name" value="Ali" id="Ali" checked>Ali</label>
+                <label><input type="checkbox" name="name" value="Andthen" id="Andthen" checked>Andthen</label>
+                <label><input type="checkbox" name="name" value="Eric" id="Eric" checked>Eric</label>
+                <label><input type="checkbox" name="name" value="Georg" id="Georg" checked>Georg</label>
+                <label><input type="checkbox" name="name" value="Klaus" id="Klaus" checked>Klaus</label>
+                <label><input type="checkbox" name="name" value="Michael" id="Michael" checked>Michael</label>
+                <label><input type="checkbox" name="name" value="Mustafa" id="Mustafa" checked>Mustafa</label>
+                <label><input type="checkbox" name="name" value="Navid" id="Navid" checked>Navid</label>
+                <label><input type="checkbox" name="name" value="Rezan" id="Rezan" checked>Rezan</label>
+                <label><input type="checkbox" name="name" value="Ricardo" id="Ricardo" checked>Ricardo</label>
+                <label><input type="checkbox" name="name" value="Rihab" id="Rihab" checked>Rihab</label>
+                <label><input type="checkbox" name="name" value="Salah" id="Salah" checked>Salah</label>
+                <div class="groups">Gruppenzahl:</div>
+                <select name="groups" id="groups">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 <div><input type="submit" value="Abschicken" ></div>
             </form>
-            <div id="result"></div>
+            <div id="result">
+                <ul id="result1"></ul>
+                <ul id="result2"></ul>
+                <ul id="result3"></ul>
+                <ul id="result4"></ul>
+                <ul id="result5"></ul>
+            </div>
         </section>
     </main>
     <script src="js/main.js"></script>

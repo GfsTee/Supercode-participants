@@ -18,30 +18,27 @@ function shuffle(array) {
     
     return array;
     }
-function calc() {
-    var part = Number(document.getElementById("participants").value);
-    var group = Number(document.getElementById("groups").value);
-    var parGroup = Math.floor(part/group);
-    var k;
-    console.log(parGroup);
+var res1 = document.getElementById("result1");
+
+
+function check() {
+    var checkboxes = document.querySelectorAll('input[name="name"]:checked'), values = [];
+    Array.prototype.forEach.call(checkboxes, function(el) {
+        values.push(el.value);
+    });
+    shuffle(values);
+    console.log(values);
+    var group = document.getElementById("groups").value;
+    console.log("Groups:" + group);
+    var parGroup = Math.floor(values.length/group);
+    console.log("Teilnehmer/Gruppe:" + parGroup);
     result.innerHTML = "";
-    if (group > part) {
-        result.innerHTML = "Das ist leider nicht zu berechnen";
-    } else {
-        var partArray = []
-        for (let i = 1; i <= part; i++) {
-            
-            partArray.push(i);
-            shuffle(partArray);
+    for (let j = 1; j<=group; j++) {
+        for (let k = 1; k<=parGroup; k++) {
+            result.innerHTML += `<p><strong>Gruppe ${j}:</strong> ${values.pop()}</p>`;
         }
-        shuffle(partArray);
-        for (let j = 1; j<=group; j++) {
-            for (k = 1; k<=parGroup; k++) {
-                result.innerHTML += `<p>Gruppe ${j}: Teilnehmer ${partArray.pop()}</p>`
-            }
-        }
-        while (partArray.length > 0) {
-            result.innerHTML += `<p class="rest"> Teilnehmer ${partArray.pop()} muss leider so verteilt werden :/</p>`
-        }
+    }
+    while (values.length > 0) {
+        result.innerHTML += `<p class="rest">${values.pop()} hat leider keine Gruppe gefunden.</p>`
     }
 }
